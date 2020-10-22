@@ -24,7 +24,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule, // CommonModule (base elements from Angular pipes, directives ...)
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
   ],
   exports: [
 

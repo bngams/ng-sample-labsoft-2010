@@ -4,6 +4,12 @@
 
 .menu-item {
     margin: 0 15px;
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.menu-item:hover {
+    text-decoration: underline !important;
 }
 
 .menu-item.active {
