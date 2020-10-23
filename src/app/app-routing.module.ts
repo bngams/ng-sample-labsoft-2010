@@ -8,6 +8,7 @@ const routes: Routes = [
   // lazy loading (chargement différé => loadChildren => import)
   // /products => '' => /products => ProductDashboardComponent
   { path: 'products', loadChildren: () => import('src/app/modules/product/product.module').then(m => m.ProductModule) },
+  { path: 'cart', loadChildren: () => import('src/app/modules/cart/cart.module').then(m => m.CartModule) },
   { path: 'home', component: HomeComponent },
   { path: 'get-started', component: GetStartedComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

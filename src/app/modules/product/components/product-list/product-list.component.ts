@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../models/product';
 import { PRODUCTS } from '../../mocks/product.mock';
 
@@ -8,7 +8,16 @@ import { PRODUCTS } from '../../mocks/product.mock';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+  // binding [products]="variable"
+  @Input()
+  productsWithInput: Product[] = new Array();
+
+  // basic products attribute
   products: Product[] = new Array();
+
+  // On peut lier plusieurs composants enfants
+  // @ViewChildren(ProductCardComponent)
+  // productCards: Query<ProductCardComponent>;
 
   constructor() { }
 
@@ -19,6 +28,10 @@ export class ProductListComponent implements OnInit {
   loadProductsViaMock(): void {
     // via mock
     this.products = PRODUCTS;
+  }
+
+  addProductList(product: Product): void {
+    this.products.push(product);
   }
 
 }

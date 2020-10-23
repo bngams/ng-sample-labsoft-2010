@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product-form',
@@ -8,6 +9,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ProductFormComponent implements OnInit {
   productForm: FormGroup;
+  // EventEmitter <=> CustomEvent JS
+  // EventEmitter<Product> => l'evenement transporte un objet de type Product
+  // @Output => permet d'accéder au event binding sur les composants parents (addProduct)
+  @Output()
+  addProduct = new EventEmitter<Product>();
 
   constructor() { }
 
@@ -26,6 +32,8 @@ export class ProductFormComponent implements OnInit {
 
   submit(): void {
     console.log(this.productForm.value);
+    // declencher l'evenement
+    this.addProduct.emit(this.productForm.value);
   }
 
 }
