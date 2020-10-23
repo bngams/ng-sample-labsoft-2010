@@ -23,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule, // CommonModule (base elements from Angular pipes, directives ...)
     BrowserAnimationsModule,
+    // ProductModule
     AppRoutingModule,
     MaterialModule,
   ],
