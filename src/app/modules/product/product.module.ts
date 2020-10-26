@@ -7,13 +7,14 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ProductDashboardComponent } from './components/product-dashboard/product-dashboard.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { SharedModule } from 'src/app/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [ProductListComponent, ProductFormComponent, ProductDashboardComponent, ProductCardComponent],
   imports: [
     SharedModule,
-    ProductRoutingModule,
-  ]
+    ProductRoutingModule
+  ],
 })
 export class ProductModule { }

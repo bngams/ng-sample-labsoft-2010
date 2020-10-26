@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MaterialModule } from './material.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserAnimationsModule,
     // ProductModule
     AppRoutingModule,
-    MaterialModule,
+    SharedModule
   ],
   exports: [
 

@@ -5,7 +5,7 @@ import { ProductListComponent } from '../../components/product-list/product-list
 @Component({
   selector: 'app-product-dashboard',
   templateUrl: './product-dashboard.component.html',
-  styleUrls: ['./product-dashboard.component.scss']
+  styleUrls: ['./product-dashboard.component.scss'],
 })
 export class ProductDashboardComponent implements OnInit {
   productList: Product[] = new Array();
